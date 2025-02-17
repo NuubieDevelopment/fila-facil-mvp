@@ -17,7 +17,7 @@ header{
     justify-content: space-between;
     width: 100%;
     height: 80vh;
-    background: linear-gradient(to right, #0066ff, #0074fe, #0097fe);
+    background: linear-gradient(to right, #0066ff,#0074fe, #0097fe, #0097fe);
     padding: 20px 20px 20px 60px;    
 }
 
@@ -144,8 +144,12 @@ aside > svg{
     align-items: center;
 }
 
-.benefits__card__single__title > img,
 .benefits__card__single__title > svg{
+    width: 80px;
+    height: 80px;
+}
+
+.benefits__card__single__title > img{
     width: 80px;
     height: 80px;
 }
@@ -153,6 +157,7 @@ aside > svg{
 .benefits__card__single__title > h2{
     font-size: 17px;
     margin-left: 20px;
+    color: #333;
 }
 
 .benefits__card__single:nth-child(2){
@@ -161,7 +166,12 @@ aside > svg{
 
 .benefits__card__single:nth-child(3) > .benefits__card__single__title > h2{
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 0;
+}
+
+.benefits__card__single:nth-child(3) > .benefits__card__single__title > svg{
+    position: relative;
+    top: 6px;
 }
 
 .benefits__card__single__content{
@@ -320,4 +330,59 @@ footer{
     width: 100%;
     height: auto;
     background-color: #0066ff;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 80px 60px 80px;
+}
+
+.footer__initial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__title__and__socials{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__contact__and__security,
+.footer__title, .footer__socials{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__title > h2{
+    position: relative;
+    top: 7px;
+    left: 8px;
+    font-size: 24px;
+}
+
+.footer__socials{
+    padding-top: 22px;
+    padding-left: 22px;
+}
+
+.footer__socials > p{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer__socials > p:last-child{
+    margin-right: 0;
+}
+
+.footer__contact{
+    text-align: center;
+}
+
+.footer__security{
+    width: 350px;
+    text-align: center;
 }
