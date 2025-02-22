@@ -1,0 +1,35 @@
+/* section about */
+.about{
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 80px 40px 120px 40px;
+}
+
+.about__wrapper > h2{
+    color: #333;
+    padding-left: 5px;
+}
+
+.about__wrapper > p{
+    width: 760px;
+    font-size: 18px;
+}
+
+.about__wrapper > p:nth-of-type(1){
+    padding-top: 60px;
+}
+
+.about__wrapper > p:nth-of-type(2){
+    padding-top: 30px;
+}
+
+.about__wrapper > p > a{
+    text-decoration: none;
+}
+
+aside > svg{
+    margin-left: 80px;
+    margin-top: 70px;
+}

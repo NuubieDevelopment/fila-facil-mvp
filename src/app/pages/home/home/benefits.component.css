@@ -1,0 +1,71 @@
+/* section benefits */
+.benefits{
+    background-color: #d9d9d9;
+    padding: 70px 40px;
+}
+
+.benefits > h2{
+    text-align: center;
+    color: #333;
+    padding-bottom: 60px;
+}
+
+.benefits__cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefits__card__single{
+    background-color: #f5f5f5;
+    width: 310px;
+    border-radius: 5px;
+    padding: 25px 20px;
+    box-shadow: 0px 4px 2px 1px #33333346;
+}
+
+.benefits__card__single__title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.benefits__card__single__title > svg{
+    width: 80px;
+    height: 80px;
+}
+
+.benefits__card__single__title > img{
+    width: 80px;
+    height: 80px;
+}
+
+.benefits__card__single__title > h2{
+    font-size: 17px;
+    margin-left: 20px;
+    color: #333;
+}
+
+.benefits__card__single:nth-child(2){
+    margin: 0 40px;
+}
+
+.benefits__card__single:nth-child(3) > .benefits__card__single__title > h2{
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.benefits__card__single:nth-child(3) > .benefits__card__single__title > svg{
+    position: relative;
+    top: 6px;
+}
+
+.benefits__card__single__content{
+    padding-top: 10px;
+}
+
+.benefits__card__single__content > p{
+    font-size: 14px;
+    font-weight: 300;
+}
