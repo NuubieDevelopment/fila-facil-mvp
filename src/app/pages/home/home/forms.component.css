@@ -6,6 +6,7 @@
 
 .card__forms__wrapper{
     width: 1100px;
+    max-width: 99%;
     height: 290px;
     background-color: #fff;
     margin: 0 auto;
@@ -14,10 +15,12 @@
     display: flex;
     flex-direction: row;
     box-shadow: 0px 3px 2px 1px #33333346;
+    transition: all 1s ease-in-out;
 }
 
 .card__forms__content{
-    padding: 55px 10px 20px 65px;
+    padding: 55px 0px 20px 65px;
+    transition: all 1s ease-in-out;
 }
 
 .card__forms__content > h2{
@@ -47,12 +50,240 @@
 .card__forms__wrapper > aside > picture{
     position: absolute;
     bottom: 0;
+    right: 10px;
     display: flex;
     flex-direction: row;
+    transition: all 1s ease-in-out;
+}
+
+.card__forms__wrapper > aside > picture > svg:nth-child(1){
+    position: relative;
+    left: 80px;
+    width: 366px;
+    height: 244px;
+    transition: all 1s ease-in-out;
 }
 
 .card__forms__wrapper > aside > picture > svg:nth-child(2){
     position: relative;
     top: 10px;
-    right: 75px;
+    right: 0px;
+    width: 313px;
+    height: 234px;
+    transition: all 1s ease-in-out;
+}
+
+@media (width < 1090px) {
+    .card__forms__content{
+        padding: 45px 10px 10px 35px;
+    }
+    
+    .card__forms__content > h2{
+        font-size: 19px;
+    }
+    
+    .card__forms__content > p{
+        width: 400px;
+    }
+
+    .card__forms__wrapper > aside > picture{
+        right: 0px;
+    }
+
+    .card__forms__wrapper > aside > picture > svg:nth-child(1){
+        position: relative;
+        top: 3px;
+        left: 100px;
+        width: 320px;
+        height: 220px;
+    }
+    
+    .card__forms__wrapper > aside > picture > svg:nth-child(2){
+        position: relative;
+        top: 20px;
+        right: -10px;
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (width < 980px) {
+    .card__forms__wrapper{
+        height: 235px;
+    }
+
+    .card__forms__content{
+        padding: 25px 10px 10px 30px;
+    }
+    
+    .card__forms__content > h2{
+        font-size: 18px;
+        padding-bottom: 30px;
+    }
+    
+    .card__forms__content > p{
+        width: 300px;
+        padding-bottom: 30px;
+    }
+
+    .card__forms__wrapper > aside > picture{
+        right: 0px;
+    }
+
+    .card__forms__wrapper > aside > picture > svg:nth-child(1){
+        position: relative;
+        top: 3px;
+        left: 120px;
+        width: 320px;
+        height: 220px;
+    }
+    
+    .card__forms__wrapper > aside > picture > svg:nth-child(2){
+        position: relative;
+        top: 20px;
+        right: -30px;
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (width < 860px) {
+    .card__forms__wrapper{
+        height: 220px;
+    }
+
+    .card__forms__content{
+        width: 100%;
+    }
+
+    .card__forms__content > h2{
+        font-size: 23px;
+    }
+    
+    .card__forms__content > p{
+        width: 100%;
+        max-width: 99%;
+        text-align: left;
+        padding-bottom: 15px;
+    }
+    
+    .card__forms__content > a > button{
+       position: relative;
+       top: 20px;
+       left: 85%;
+       transform: translateX(-50%);
+    }    
+
+    .card__forms__wrapper > aside{
+        display: none;
+    }
+}
+
+@media (width < 760px) {
+    .card__forms__wrapper{
+        height: 245px;
+    }
+
+    .card__forms__content > p{
+        padding-right: 20px;
+    }
+
+    .card__forms__content > a > button{
+        left: 80%;
+        transform: translateX(-50%);
+    }    
+}
+
+@media (width < 620px) {
+    .card__forms{
+        padding: 0px 20px 160px 20px;
+    }
+
+    .card__forms__wrapper{
+        height: 230px;
+    }
+
+    .card__forms__content > h2{
+        font-size: 18px;
+        padding-bottom: 25px;
+    }
+
+    .card__forms__content > p{
+        font-size: 14px;
+    }
+
+    .card__forms__content > a > button{
+        left: 78%;
+        transform: translateX(-50%);
+    }  
+}
+
+@media (width < 500px) {
+    .card__forms__content > a > button{
+        left: 46%;
+        transform: translateX(-50%);
+    }  
+}
+
+@media (width < 470px) {
+    .card__forms{
+        padding: 0px 10px 100px 10px;
+    }
+
+    .card__forms__wrapper{
+        height: 200px;
+    }
+
+    .card__forms__content{
+        padding: 20px 10px 10px 20px;
+    }
+
+    .card__forms__content > h2{
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+
+    .card__forms__content > p{
+        font-size: 12px;
+    }
+
+    .card__forms__content > a > button{
+        width: 110px;
+        height: 40px;
+        font-size: 13px;
+        font-weight: bold;
+    }  
+}
+
+@media (width < 400px) {
+    .card__forms__wrapper{
+        height: 160px;
+    }
+
+    .card__forms__content{
+        padding: 15px 10px 10px 15px;
+    }
+
+    .card__forms__content > h2{
+        font-size: 14px;
+        padding-bottom: 15px;
+    }
+
+    .card__forms__content > p{
+        font-size: 11px;
+        padding-bottom: 0px;
+        padding-right: 10px;
+    }
+
+    .card__forms__content > a > button{
+        width: 95px;
+        height: 36px;
+        font-size: 11px;
+    }  
+}
+
+@media (width < 338px) {
+    .card__forms__wrapper{
+        height: 185px;
+    }
 }
