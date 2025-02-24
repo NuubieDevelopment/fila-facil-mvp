@@ -225,7 +225,7 @@ header{
 
 @media (width < 1000px){
     header{
-        background-color: #0066ff;
+        background: #0066ff;
     }
 
     .introduction{
