@@ -305,6 +305,10 @@ header{
 }
 
 @media (width < 390px){
+    header{
+        height: 60vh;  
+    }
+
     .introduction > h1{
         font-size: 17px;
     }
@@ -316,7 +320,7 @@ header{
 
 @media (width < 350px){
     header{
-        padding: 20px 10px 20px 10px;   
+        padding: 20px 10px 20px 10px; 
     }
 
     .introduction > h1{
@@ -329,10 +333,6 @@ header{
 }
 
 @media (width < 322px){
-    header{
-        height: 65vh;
-    }
-
     .introduction > h1{
         font-size: 13px;
     }
