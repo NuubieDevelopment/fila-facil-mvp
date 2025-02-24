@@ -91,21 +91,67 @@ header{
     object-fit: cover; /* para cobrir toda a tela */
 }
 
-@media (width < 1300px) {
+@media (width < 1340px) {
     .introduction__gallery picture {
-        width: 220%;    /* 2 imagens lado a lado */ 
+        width: 205%; 
     }
 }
 
-@media (width < 1230px) {
+@media (width < 1320px) {
     .introduction__gallery picture {
-        width: 240%;    /* 2 imagens lado a lado */
+        width: 207%; 
+    }
+}
+
+@media (width < 1300px) {
+    .introduction__gallery picture {
+        width: 212%;   
+    }
+}
+
+@media (width < 1280px) {
+    .introduction__gallery picture {
+        width: 215%;   
+    }
+}
+
+@media (width < 1260px) {
+    .introduction__gallery picture {
+        width: 218%;   
+    }
+}
+
+@media (width < 1240px) {
+    .introduction__gallery picture {
+        width: 221%;   
+    }
+}
+
+@media (width < 1220px) {
+    .introduction__gallery picture {
+        width: 225%;   
+    }
+}
+
+@media (width < 1200px) {
+    .introduction__gallery picture {
+        width: 229%;   
+    }
+}
+
+@media (width < 1180px) {
+    .introduction__gallery picture {
+        width: 233%;   
     }
 }
 
 @media (width < 1160px) {
     .introduction{
         padding: 20px; 
+    }
+
+    .introduction__gallery picture {
+        width: 238%;   
     }
 }
 
@@ -129,9 +175,59 @@ header{
         padding-top: 40px;
         font-size: 17px;
     }
+
+    .introduction__gallery picture {
+        width: 240%;    
+    }
 }
 
-@media (width < 930px){
+@media (width < 1134px) {
+    .introduction__gallery picture {
+        width: 245%;
+    } 
+}
+
+@media (width < 1112px) {
+    .introduction__gallery picture {
+        width: 250%;
+    } 
+}
+
+@media (width < 1090px) {
+    .introduction__gallery picture {
+        width: 255%;
+    } 
+}
+
+@media (width < 1070px) {
+    .introduction__gallery picture {
+        width: 260%;
+    } 
+}
+
+@media (width < 1050px) {
+    .introduction__gallery picture {
+        width: 265%;
+    } 
+}
+
+@media (width < 1030px) {
+    .introduction__gallery picture {
+        width: 270%;
+    } 
+}
+
+@media (width < 1010px) {
+    .introduction__gallery picture {
+        width: 275%;
+    } 
+}
+
+@media (width < 1000px){
+    header{
+        background-color: #0066ff;
+    }
+
     .introduction{
         width: 100%; 
         background: transparent;
@@ -164,16 +260,25 @@ header{
     }
 }
 
-@media (width < 730px){
+@media (width < 882px){
+    header{
+        height: 70vh;
+    }
+
     .introduction > h1{
-        font-size: 30px;
+        font-size: 27px;
     }
 }
 
-@media (width < 640px){
+@media (width < 730px){
     .introduction > h1{
-        font-size: 27px;
-        font-weight: 700;
+        font-size: 24px;
+    }
+}
+
+@media (width < 648px){
+    .introduction > h1{
+        font-size: 21px;
     }
 }
 
@@ -181,9 +286,58 @@ header{
     header, .introduction{
         padding: 20px 30px;   
     }
+}
+
+@media (width < 465px){
+    .introduction > h3{
+        font-size: 16px;
+    }
+}
+
+@media (width < 435px){
+    .introduction > h1{
+        font-size: 19px;
+    }
+
+    .introduction > h3{
+        font-size: 14px;
+    }
+}
+
+@media (width < 390px){
+    .introduction > h1{
+        font-size: 17px;
+    }
+
+    .introduction > h3{
+        font-size: 12px;
+    }
+}
+
+@media (width < 350px){
+    header{
+        padding: 20px 10px 20px 10px;   
+    }
 
     .introduction > h1{
-        font-size: 24px;
-        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .introduction > h3{
+        font-size: 11px;
+    }
+}
+
+@media (width < 322px){
+    header{
+        height: 65vh;
+    }
+
+    .introduction > h1{
+        font-size: 13px;
+    }
+
+    .introduction > h3{
+        font-size: 10px;
     }
 }
