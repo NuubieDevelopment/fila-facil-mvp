@@ -220,7 +220,7 @@
 
 @media (width < 500px) {
     .card__forms__content > a > button{
-        left: 46%;
+        left: 50%;
         transform: translateX(-50%);
     }  
 }
