@@ -86,6 +86,10 @@ aside > svg{
 }
 
 @media (width < 480px){
+    .about{
+        padding: 60px 10px 80px 10px;
+    }
+
     .about__wrapper > h2{
         font-size: 19px;
     }
