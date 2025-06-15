@@ -43,7 +43,7 @@ footer{
     padding-left: 22px;
 }
 
-.footer__socials > svg{
+.footer__socials > a > svg{
     margin-right: 20px;
     cursor: pointer;
     width: 34px;
@@ -52,15 +52,15 @@ footer{
     top: -2px;
 }
 
-.footer__socials > svg:nth-child(2),
-.footer__socials > svg:nth-child(3){
+.footer__socials > a > svg:nth-child(2),
+.footer__socials > a > svg:nth-child(3){
     position: relative;
     top: -3px;
     width: 35px;
     height: 35px;
 }
 
-.footer__socials > svg:last-child{
+.footer__socials > a > svg:last-child{
     margin-right: 0;
 }
 
