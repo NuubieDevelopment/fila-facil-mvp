@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +13,14 @@ import { Component } from '@angular/core';
     './footer.component.css',
   ]
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+  yearActual: number = 0;
 
+  ngOnInit(): void {
+    this.getYearActual();
+  }
+
+  getYearActual(){
+    this.yearActual = new Date().getFullYear();
+  }
 }
