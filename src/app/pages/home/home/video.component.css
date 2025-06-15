@@ -1,3 +1,27 @@
+@keyframes move_arrow_right {
+    0%{
+        left: 50%;
+    }
+    50%{
+        left: 55%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+
+@keyframes move_arrow_bottom {
+    0%{
+        top: 40px;
+    }
+    50%{
+        top: 55px;
+    }
+    100%{
+        top: 40px;
+    }
+}
+
 /* section video */
 .video{
     background-color: #f5f5f5;
@@ -25,8 +49,11 @@
 .video__wrapper > svg{
     position: relative;
     top: 15px;
-    left: 50%;
     transform: translateX(-50%);
+    animation-name: move_arrow_right;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
     width: 56px; 
     height: 56px;
 }
@@ -99,7 +126,7 @@
     
     .video__wrapper > svg{
         position: relative;
-        top: 40px;
+        animation-name: move_arrow_bottom;
         left: 44%;
         transform: translateX(-50%);
         width: 40px; 
