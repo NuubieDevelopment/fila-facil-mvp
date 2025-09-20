@@ -1,0 +1,100 @@
+.avaliation{
+    padding: 100px 20px 200px 20px;
+    background: linear-gradient(to bottom, #0000ffd7,#0D55B2);
+}
+
+.avaliation__title > h2{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.avaliation > form{
+    margin: 60px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+}
+
+.avaliation__form__camp{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.avaliation__form__camp > label{
+    color: #f8f8f8;
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+
+.avaliation__form__camp > input,
+.avaliation__form__camp > select,
+.avaliation__form__camp > textarea{
+    outline: 0;
+    border: 0;
+    border-radius: 3px;
+    width: 100%;
+    padding: 6px 15px;
+}
+
+.avaliation__form__camp > input,
+.avaliation__form__camp > select{
+    height: 35px;
+}
+
+.avaliation__form__camp > textarea{
+    height: 200px;
+    resize: none;
+    overflow-y: auto;
+}
+
+.stars__attendance{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.star__single > svg{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+form > button[type=submit]{
+    height: 40px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: #0D55B2;
+    cursor: pointer;
+}
+
+form > button[type=submit]:active{
+    position: relative;
+    top: 1px;
+}
+
+@media (width < 402px) {
+    .avaliation__title > h2{
+        font-size: 21px;
+    }
+
+    .avaliation{
+        padding: 100px 20px 150px 20px;
+    }
+}
+
+@media (width < 360px) {
+    .avaliation__title > h2{
+        font-size: 19px;
+    }
+
+    .avaliation{
+        padding: 100px 20px;
+    }
+}

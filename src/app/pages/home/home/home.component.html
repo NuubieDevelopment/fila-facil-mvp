@@ -65,11 +65,15 @@
                 <h2>Quem somos?</h2>
     
                 <p>
-                    O <a href="">FilaFácil</a> nasceu para transformar a experiência de quem precisa de atendimento rápido e sem complicação. Nossa plataforma conecta empresas e clientes, eliminando filas desnecessárias e trazendo mais organização para eventos e serviços.
+                    O <a href="">FilaFácil</a> acreditamos que o tempo é o bem mais valioso das pessoas. Por isso, criamos uma plataforma pensada para tornar o atendimento muito mais simples, ágil e organizado.
                 </p>
     
                 <p>
-                    Aqui você pode retirar senhas ou ingressos pelo celular, acompanhar o status da fila em tempo real e até agendar um horário para ser atendido no momento certo. Tudo isso com praticidade, eficiência e tecnologia de ponta!
+                    Aqui você pode retirar os tickets direto pelo celular, acompanhar sua posição na fila em tempo real pelo site ou whatsapp e até passar por pré atendimentopara evitar esperas desnecessárias e superlotação.
+                </p>
+
+                <p>
+                    Nosso objetivo é conectar empresas e clientes de forma inteligente, eliminando filas físicas e oferecendo praticidade, eficiência e tecnologia de ponta para o seu dia a dia.
                 </p>
             </div><!--about__wrapper-->
     
@@ -102,13 +106,13 @@
                     </svg>
                         
                     <h2>
-                        Redução de Filas e Tempo de Espera
+                         Pré-atendimento e Triagem Online
                     </h2>
                 </div><!--benefits__card__single__title-->
 
                 <div class="benefits__card__single__content">
                     <p>
-                        Os clientes podem retirar senhas ou ingressos de forma digital, evitando filas físicas e tornando o atendimento mais ágil.
+                        Permite que os clientes realizem um pré-cadastro e uma triagem digital antes de serem atendidos, otimizando tempo e reduzindo gargalos no atendimento presencial.
                     </p>
                 </div><!--benefits__card__single__content-->
             </div><!--benefits__card__single-->
@@ -118,13 +122,13 @@
                     <img src="../../../../assets/laptop-mobile.svg" alt="ícone laptop mobile">
                         
                     <h2>
-                        Facilidade e Conveniência
+                        Gestão de Fila Online com Integração ao WhatsApp
                     </h2>
                 </div><!--benefits__card__single__title-->
 
                 <div class="benefits__card__single__content">
                     <p>
-                        Acesso fácil e rápido pelo celular ou computador, permitindo que os usuários reservem ingressos ou senhas de qualquer lugar.
+                        O cliente acompanha sua posição na fila em tempo real e recebe notificações automáticas pelo WhatsApp, garantindo praticidade e maior engajamento.
                     </p>
                 </div><!--benefits__card__single__content-->
             </div><!--benefits__card__single-->
@@ -136,13 +140,13 @@
                     </svg>    
                         
                     <h2>
-                        Melhor Organização
+                        Sistema de Avaliação Pós-Atendimento
                     </h2>
                 </div><!--benefits__card__single__title-->
 
                 <div class="benefits__card__single__content">
                     <p>
-                        As empresas podem gerenciar o fluxo de atendimento e conseguem controlar melhor o tempo e a entrada do clientes.
+                        Após o atendimento, o cliente pode avaliar a experiência de forma rápida e simples, oferecendo feedback valioso para melhorias contínuas do serviço.
                     </p>
                 </div><!--benefits__card__single__content-->
             </div><!--benefits__card__single-->
@@ -157,7 +161,7 @@
                 <h3>Para empresas</h3>
 
                 <p>
-                    Esqueça a preocupação com filas manuais! Com o FilaFácil, você cria seu evento, configura as filas conforme a demanda do dia ou da semana e acompanha relatórios detalhados para otimizar o atendimento. Simples, eficiente e sem complicação!
+                    Com o FilaFácil, sua empresa organiza todo o fluxo de atendimento de forma digital: realiza triagem online antes da chegada do cliente, gerencia as filas em tempo real com notificações automáticas via WhatsApp e ainda recebe avaliações pós-atendimento para melhorar continuamente os serviços.
                 </p>
             </div><!--how__works__single-->
 
@@ -165,7 +169,7 @@
                 <h3>Para clientes</h3>
 
                 <p>
-                    Escolha seu serviço ou evento, agende um horário retire sua ficha pelo site e chegue no momento certo, sem filas e sem espera! 
+                    O cliente faz a triagem online de forma prática, recebe avisos pelo WhatsApp sobre sua posição na fila e, após ser atendido, pode avaliar a experiência em poucos cliques. Mais agilidade, menos espera e um atendimento pensado de ponta a ponta.
                 </p>
             </div><!--how__works__single-->
         </div><!--how__works__wrapper-->
@@ -191,7 +195,7 @@
         
         <picture>
             <video controls>
-                <source src="../../../../assets/video-copia-mvp.mp4" type="video/mp4">
+                <source src="../../../../assets/video-mvp.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg"> <!--Não tem ainda-->
                 Seu navegador não suporta a tag video
               </video> 
@@ -235,6 +239,118 @@
             </aside>
         </div><!--card__forms__wrapper-->
     </section><!--card__forms-->
+
+    <section class="avaliation">
+        <div class="avaliation__title">
+            <h2>Avaliação Pós-Atendimento</h2>
+        </div><!--avaliation__title-->
+
+        <form method="post" (submit)="sendAvaliation()">
+            <div class="avaliation__form__camp">
+                <label>Nome do paciente</label>
+
+                <input type="text" placeholder="Ex: João ou Anônimo" name="namePatient" [(ngModel)]="namePatient">
+            </div><!--avaliation__form__camp-->
+
+            <div class="avaliation__form__camp">
+                <label>Tipo do local de atendimento</label>
+
+                <select id="" [(ngModel)]="typeCareLocation" name="typeCareLocation">
+                    <option value="">Selecione uma opção</option>
+                    <option value="clinica">Clínica</option>
+                    <option value="hospital">Hospital</option>
+                    <option value="upa">UPA</option>
+                    <option value="ubs">UBS</option>
+                </select>
+            </div><!--avaliation__form__camp-->
+            
+            <div class="avaliation__form__camp">
+                <label>Nome do local</label>
+
+                <input type="text" placeholder="Ex: Clínica dos Olhos" name="nameLocation" [(ngModel)]="nameLocation">
+            </div><!--avaliation__form__camp-->
+
+            <div class="avaliation__form__camp">
+                <label>Data de presença no local</label>
+
+                <input type="date" name="dateAttendance" [(ngModel)]="dateAttendance">
+            </div><!--avaliation__form__camp-->
+            
+            <div class="avaliation__form__camp">
+                <label>Tempo de espera para atendimento</label>
+
+                <select name="waitingTimeCare" id="" [(ngModel)]="waitingTimeCare">
+                    <option value="">Selecione uma opção</option>
+                    <option value="MENOS_DE_15_MINUTOS">Menos de 15 minutos</option>
+                    <option value="15_A_30_MINUTOS">15 a 30 minutos</option>
+                    <option value="30_A_60_MINUTOS">30 a 60 minutos</option>
+                    <option value="MAIS_DE_1_HORA">Mais de 1 hora</option>
+                    <option value="MAIS_DE_2_HORAS">Mais de 2 horas</option>
+                </select>
+            </div><!--avaliation__form__camp-->
+            
+            <div class="avaliation__form__camp">
+                <label>Nota do atendimento</label>
+
+                <!--<select name="typeAssessment" id="" [(ngModel)]="typeAssessment">
+                    <option value="">Selecione uma opção</option>
+                    <option value="boa-avaliacao">Boa Avaliação</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="denuncia">Denúncia</option>
+                </select>-->
+
+                <div class="stars__attendance">
+                    <div class="star__single">
+                        @if (isStarOneActive) {
+                            <svg fill="#f6d32d" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#f6d32d" (click)="addOneStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        } @else{
+                            <svg fill="#f8f8f8" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ccc" (click)="addOneStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        }
+                    </div><!--star__single-->
+
+                    <div class="star__single">
+                        @if (isStarTwoActive) {
+                            <svg fill="#f6d32d" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#f6d32d" (click)="addTwoStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        } @else{
+                            <svg fill="#f8f8f8" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ccc" (click)="addTwoStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        }
+                    </div><!--star__single-->
+                    
+                    <div class="star__single">
+                        @if (isStarThreeActive) {
+                            <svg fill="#f6d32d" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#f6d32d" (click)="addThreeStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        } @else{
+                            <svg fill="#f8f8f8" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ccc" (click)="addThreeStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        }
+                    </div><!--star__single-->
+                    
+                    <div class="star__single">
+                        @if (isStarFourActive) {
+                            <svg fill="#f6d32d" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#f6d32d" (click)="addFourStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        } @else{
+                            <svg fill="#f8f8f8" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ccc" (click)="addFourStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        }
+                    </div><!--star__single-->
+                    
+                    <div class="star__single">
+                        @if (isStarFiveActive) {
+                            <svg fill="#f6d32d" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#f6d32d" (click)="addFiveStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        } @else{
+                            <svg fill="#f8f8f8" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ccc" (click)="addFiveStarAttendance()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg>
+                        }
+                    </div><!--star__single-->
+                </div><!--stars__attendance-->
+            </div><!--avaliation__form__camp-->
+            
+            <div class="avaliation__form__camp">
+                <label>Descrição do atendimento</label>
+
+                <textarea name="descriptionCare" id="" [(ngModel)]="descriptionCare"></textarea>
+            </div><!--avaliation__form__camp-->
+
+            <button type="submit">ENVIAR</button>
+        </form>
+    </section><!--avaliation-->
 
     <footer>
         <div class="footer__initial">
