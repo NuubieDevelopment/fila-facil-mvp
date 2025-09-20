@@ -37,6 +37,6 @@ export class AvaliationService {
       'description_care': avaliationTYpe.descriptionCare
     };
 
-    return this.http.post<MessageStatusType>('http://localhost:8000/api/save_avaliation/prod', dataSaveAvaliation);
+    return this.http.post<MessageStatusType>('https://filafacilmvpbackend.onrender.com/api/save_avaliation/prod', dataSaveAvaliation);
   }
 }
