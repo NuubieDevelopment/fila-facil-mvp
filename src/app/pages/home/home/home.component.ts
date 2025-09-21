@@ -26,11 +26,12 @@ export class HomeComponent implements OnInit{
   dateAttendance: string = "";
   waitingTimeCare: string = "";
   descriptionCare: string = "";
+  descriptionCareLength: number = 0;
   numberAvaliationAttendance: number = 0;
 
   /**callbacks & messages */
   callbackError: boolean = false;
-  callbackSucess: boolean = false;
+  callbackSuccess: boolean = false;
   messageError: string = "";
   messageSucess: string = "";
 
@@ -48,6 +49,10 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
     this.getYearActual();
+  }
+
+  getDescriptionCareLength(){
+    this.descriptionCareLength = this.descriptionCare.length;
   }
 
   getYearActual(){
@@ -123,56 +128,72 @@ export class HomeComponent implements OnInit{
       'descriptionCare': this.descriptionCare
     };
 
-    console.log(dataSaveAvaliation);
-
     this.avaliationService.saveAvaliationProd(dataSaveAvaliation).subscribe({
       next: (res) => {
         console.log(res);
+        this.callbackSuccess = true;
+        this.messageSucess = res.message;
+
+        setTimeout(() => {
+          this.callbackSuccess = false;
+          this.messageSucess = "";
+        }, 10000);
       },
       error: (err) => {
-        console.log(err);
+       
       }
     });
   }
 
   validateFields(){
-    if(
-      !this.namePatient ||
-      !this.nameLocation ||
-      !this.typeCareLocation ||
-      !this.dateAttendance ||
-      !this.waitingTimeCare ||
-      !this.descriptionCare
-    ){
-      console.log("Campo(s) obrigatório(s) vazio(s)");
-      //TODO: implementar callback
-    }
-
     if(this.numberAvaliationAttendance === 0){
-      console.log("Número de estrelas da nota de atendimento precisa ser no mínimo 1");
+      this.callbackError = true;
+      this.messageError = "Número de estrelas da nota de atendimento precisa ser no mínimo 1";
+
+      setTimeout(() => {
+        this.callbackError = false;
+        this.messageError = "";
+      }, 10000);
     }
 
     if(this.namePatient.length < 4 || this.namePatient.length > 30){
-      console.log("Nome do paciente deve ter dentre 4 a 30 caracteres" + this.namePatient);
-      //TODO: implementar callback
+      this.callbackError = true;
+      this.messageError = "Nome do paciente deve ter dentre 4 a 30 caracteres";
+
+      setTimeout(() => {
+        this.callbackError = false;
+        this.messageError = "";
+      }, 10000);
     }
 
     if(this.nameLocation.length < 4 || this.nameLocation.length > 60){
-      console.log("Nome do Local deve ter dentre 4 a 60 caracteres" + this.nameLocation);
-      //TODO: implementar callback
-    }
+      this.callbackError = true;
+      this.messageError = "Nome do Local deve ter dentre 4 a 60 caracteres";
 
-    console.log(this.dateAttendance);
-    console.log("Data de atendimento - tamanho: " + this.dateAttendance.length);
+      setTimeout(() => {
+        this.callbackError = false;
+        this.messageError = "";
+      }, 10000);
+    }
 
     if(this.dateAttendance.length !== 10){
-      console.log("Formato da data inválida" + this.dateAttendance); //10/10/2010
-      //TODO: implementar callback
+      this.callbackError = true;
+      this.messageError = "Formato da data inválida";
+
+      setTimeout(() => {
+        this.callbackError = false;
+        this.messageError = "";
+      }, 10000);
     }
 
-    if(this.descriptionCare.length < 4 || this.descriptionCare.length > 2000){
-      console.log("Descrição deve ter dentre 4 a 2000 caracteres" + this.descriptionCare);
-      //TODO: implementar callback
+    if(this.descriptionCare.length > 2000){
+      this.callbackError = true;
+      this.messageError = "Descrição não deve ultrapassar 2000 caracteres";
+
+      setTimeout(() => {
+        this.callbackError = false;
+        this.messageError = "";
+      }, 10000);
     }
   }
 }

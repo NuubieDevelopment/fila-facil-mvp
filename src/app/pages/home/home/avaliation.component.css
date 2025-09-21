@@ -1,3 +1,35 @@
+/*callbacks*/
+.callbacks{
+    position: fixed;
+    top: 200px;
+    right: 40px;
+    z-index: 999;
+}
+
+.callbacks > div{
+    max-width: 300px;
+    height: auto;
+    padding: 10px;
+    border-radius: 7px;
+    border: 0;
+}
+
+.callback__error{
+    background-color: #ff0000;
+}
+
+.callback__success{
+    background-color: #00ff00;
+}
+
+.callbacks > div > p{
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/*avaliation*/
 .avaliation{
     padding: 100px 20px 200px 20px;
     background: linear-gradient(to bottom, #0000ffd7,#0D55B2);
@@ -17,6 +49,7 @@
     max-width: 500px;
     height: auto;
     position: relative;
+    z-index: 100;
 }
 
 .avaliation__form__camp{
@@ -52,6 +85,12 @@
     overflow-y: auto;
 }
 
+.avaliation__form__camp > p{
+    text-align: right;
+    color: #f8f8f8;
+    margin: 9px 0 20px 0;
+}
+
 .stars__attendance{
     display: flex;
     flex-direction: row;
@@ -72,6 +111,8 @@ form > button[type=submit]{
     letter-spacing: 0.5px;
     color: #0D55B2;
     cursor: pointer;
+    border-radius: 5px;
+    border: 0;
 }
 
 form > button[type=submit]:active{
